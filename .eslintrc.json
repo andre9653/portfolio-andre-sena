@@ -1,3 +1,116 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "@typescript-eslint/lines-between-class-members": "off",
+    "react/jsx-props-no-spreading": "off",
+    "linebreak-style": 0,
+    "react/require-default-props": "off",
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "trailingComma": "all",
+        "singleQuote": true,
+        "printWidth": 80,
+        "arrowParens": "always"
+      }
+    ],
+    "import/extensions": [
+      "error",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never",
+        "png": "always",
+        "svg": "always",
+        "css": "always",
+        "scss": "always"
+      }
+    ],
+    "skipBlankLines": 0,
+    "func-call-spacing": [
+      "error",
+      "never"
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": [
+          "function-declaration",
+          "arrow-function"
+        ],
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "multiline-ternary": 0,
+    "one-var": [
+      "error",
+      {
+        "initialized": "never"
+      }
+    ],
+    "guard-for-in": 0,
+    "no-invalid-this": 0,
+    "no-console": 0,
+    "no-debugger": 1,
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "array-bracket-spacing": [
+      2,
+      "never",
+      {
+        "objectsInArrays": false
+      }
+    ],
+    "no-trailing-spaces": [
+      "error",
+      {
+        "skipBlankLines": true
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": true,
+        "args": "none"
+      }
+    ],
+    "camelcase": "off"
+  }
 }
